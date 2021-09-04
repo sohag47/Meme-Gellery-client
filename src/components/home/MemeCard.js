@@ -69,7 +69,7 @@ export default function MemeCard() {
   const [meme_img, set_meme_img] = useState("");
   
   useEffect( () => {
-    axios.get('http://localhost:8080/api/meme')
+    axios.get('https://meme-gallery-sohag.herokuapp.com/api/meme')
     .then( res => {
       set_meme_img_link(res.data.meme_img_link)
       set_meme_img(res.data.meme_img)

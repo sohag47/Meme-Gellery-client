@@ -14,7 +14,7 @@ export default class Home extends Component {
     }
   }
     componentDidMount(){
-    axios.get('http://localhost:8080/api/meme')
+    axios.get('https://meme-gallery-sohag.herokuapp.com/api/meme')
     .then(res => {
       this.setState({ memes: res.data})
     })
@@ -24,7 +24,7 @@ export default class Home extends Component {
   }
 
     onDelete(id){
-    axios.delete('http://localhost:8080/api/meme/'+id+'/delete')
+    axios.delete('https://meme-gallery-sohag.herokuapp.com/api/meme/'+id+'/delete')
     .then(res => {
       this.props.history.push("/");
     })

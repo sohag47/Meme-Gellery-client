@@ -14,7 +14,7 @@ export default function UploadMeme() {
         data.append("meme_img_link", meme_img_link);
         data.append("file", file)
 
-        axios.post('http://localhost:8080/api/meme/create', data)
+        axios.post('https://meme-gallery-sohag.herokuapp.com/api/meme/create', data)
         .then(res => {
             set_meme_img_link('')
             set_meme_img('')

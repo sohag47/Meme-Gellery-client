@@ -14,7 +14,7 @@ export default class MemeStats extends Component {
   }
 
     componentDidMount(){
-    axios.get('http://localhost:8080/api/meme')
+    axios.get('https://meme-gallery-sohag.herokuapp.com/api/meme')
     .then(res => {
       this.setState({ memes: res.data})
     })
